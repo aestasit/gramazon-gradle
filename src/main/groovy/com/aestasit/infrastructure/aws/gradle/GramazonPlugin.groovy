@@ -14,35 +14,20 @@
  * limitations under the License.
  */
 
-package com.aestasit.gradle.plugin
+package com.aestasit.infrastructure.aws.gradle
 
+import org.gradle.api.Plugin
 import org.gradle.api.Project
-import org.gradle.testfixtures.ProjectBuilder
-import org.junit.BeforeClass
-import org.junit.Test
 
 /**
  * 
- * Test for cool plugin.
  * 
  * @author Aestas/IT
  *
  */
-class SlideryTest {
+public class GramazonPlugin implements Plugin<Project> {
 
-  static Project project
-
-  @BeforeClass
-  def static void buildProject() {
-    project = ProjectBuilder.builder().build()
-    project.with {
-      apply plugin: 'cool'
-    }
+  public void apply(Project project) {
   }
 
-  @Test
-  public void testSetup() {
-    assert project != null
-  }
-  
 }
