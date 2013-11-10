@@ -16,19 +16,19 @@
 
 package com.aestasit.infrastructure.aws.gradle
 
-import org.gradle.api.Plugin
-import org.gradle.api.Project
+import groovy.transform.Canonical
 
 /**
- * Plugin that adds common setup shared by Gramazon task types (StartInstance, TerminateInstance etc.).
+ * Common Gramazon/EC2 settings data object. 
  * 
  * @author Aestas/IT
  *
  */
-class GramazonPlugin implements Plugin<Project> {
-
-  void apply(Project project) {
-    project.extensions.create("aws", AwsSettings)
-  }
+@Canonical
+class AwsSettings {
+  
+  String acceesKeyId
+  String secretKey
+  String region = "eu-west-1"
 
 }
